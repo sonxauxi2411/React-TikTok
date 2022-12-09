@@ -1,0 +1,65 @@
+.wrapper{
+    font-family: 'ProximaNova', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    min-width: 100px;
+    padding:9px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--white);
+    border: 1px solid transparent;
+    user-select:  none;
+    span{
+        display: flex;
+        gap:5px;
+        justify-content: center;
+       
+    }
+    + .wrapper{
+        margin-left: 8px;
+
+    }
+}
+.primary{
+    background-color: var(--primary);
+    color: var(--white);
+&:hover{
+   opacity: 0.7;
+     
+}
+}
+
+.outline{
+    border-color: var(--primary);
+    color: var(--primary);
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+    
+}
+.small{
+   min-width: 88px;
+    padding: 4px 16px;
+}
+.large{
+    min-width: 140px;
+    padding:14px 16px
+}
+.text{
+    border-color: rgba(22, 24, 35, 0.12);
+    &:hover {
+        background-color: rgba(22, 24, 35, .03)
+    }
+}
+
+.getApp {
+        color: rgba(22, 24, 35, .75);
+        box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+        border-radius: 52px;
+        border-color: rgba(22, 24, 35, .12);
+        background-color: rgba(255, 255, 255, 1);
+        &:hover {
+                border-color: rgba(22, 24, 35, .2);
+                background-color: rgba(255, 255, 255, 1);
+        }
+}
