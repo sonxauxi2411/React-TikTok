@@ -37,6 +37,7 @@ const Menu = ({ children, item }) => {
   }
   return (
     <Tippy
+      hideOnClick={false}
       delay={[0, 600]}
       //honver
       interactive={true}
@@ -49,7 +50,7 @@ const Menu = ({ children, item }) => {
             {history.length > 1 && (
               <HeaderMenu title="Ngôn Ngữ" onBack={handlerPrevMenu} />
             )}
-            {renderItem()}
+            <div className={style.menu_body}> {renderItem()}</div>
           </PopperWrapper>
         </div>
       )}

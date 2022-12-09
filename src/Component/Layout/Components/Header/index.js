@@ -4,6 +4,8 @@ import { BsPerson } from 'react-icons/bs'
 import { CiBitcoin } from 'react-icons/ci'
 import { FiSettings, FiLogOut } from 'react-icons/fi'
 import 'tippy.js/dist/tippy.css'
+import { Link } from 'react-router-dom'
+import routesConfig from '~/config/routes'
 import logo from '~/assets/images/logo.svg'
 import Tippy from '@tippyjs/react'
 import Button from '~/Component/Button'
@@ -58,6 +60,17 @@ const USER_MENU = [
     to: '/feedback',
   },
   {
+    icon: <BsGlobe2 />,
+    title: 'Tiếng Việt',
+    children: {
+      title: 'Ngôn Ngữ',
+      data: [
+        { code: 'en', title: 'English' },
+        { code: 'vi', title: 'Việt Nam' },
+      ],
+    },
+  },
+  {
     icon: <FiLogOut />,
     title: 'Logout',
     to: '/feedback',
@@ -73,7 +86,9 @@ function Header() {
       <div className={style.inner}>
         {/* logo header */}
         <div className={style.logo}>
-          <img src={logo} alt="tiktok" />
+          <Link to={routesConfig.home} className={style.logo_link}>
+            <img src={logo} alt="tiktok" />
+          </Link>
         </div>
 
         {/* search */}

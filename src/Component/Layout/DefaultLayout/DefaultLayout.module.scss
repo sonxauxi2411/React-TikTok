@@ -8,7 +8,8 @@
     width: 1150px;
     min-height: 1000px;
     display: flex;
-    padding: 0 var(--default-layout-horizontal-spacer)
+    padding: 0 var(--default-layout-horizontal-spacer);
+    margin-top: 60px;
 }
 .content{
     flex:1;
